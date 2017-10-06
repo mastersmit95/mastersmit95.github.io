@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="../css/botchat.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="bot"></div>
+    <script src="../js/botchat.js"></script>
+    <script>
+        var user = guid();
+        BotChat.App({
+            directLine: { secret: 'WaiaMm857ho.cwA.hYE.AixkjufX_BarSomPDTpW_s1we1ZMFFaTOfonlgxIVWQ' },
+            user: { id: user , name: 'You'},
+            bot: { id: 'website' },
+            resize: 'detect'
+        }, document.getElementById("bot"));
+
+        function guid() {
+            function s4() {
+                return Math.floor((1 + Math.random()) * 0x10000)
+                    .toString(16)
+                    .substring(1);
+            }
+            return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+                s4() + '-' + s4() + s4() + s4();
+        }
+    </script>
+
+</body>
+
+</html>
